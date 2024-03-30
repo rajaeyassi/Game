@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html>
+<head>
+   <title>Registration Page</title>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+   <header class="animation"></header>
+   <form action="Login.html" class="sign-up-form" id="registrationForm">
+       <h2 class="title">Sign up</h2>
+       <div class="input-field">
+           <i class="fas fa-user"></i>
+           <input type="text" placeholder="Username" id="username">
+       </div>
+       <div class="input-field">
+           <i class="fas fa-envelope"></i>
+           <input type="text" placeholder="Email" id="email">
+       </div>
+       <div class="input-field">
+           <i class="fas fa-lock"></i>
+           <input type="password" placeholder="Password" id="password">
+       </div>
+       <button type="submit" class="btn">REGISTER</button>
+
+
+       <button type="button" onclick="goToLoginPage()" class="btn">Go back to login page</button>
+      
+         
+       </div>
+   </form>
+   <script type="text/javascript" src="https://download.playfab.com/PlayFabClientApi.js"></script>
+
+
+   <script>
+       function goToLoginPage() {
+           window.location.href = "Login.html";
+       }
+
+
+       // Function to handle form submission
+       document.getElementById("registrationForm").addEventListener("submit", function(event) {
+           event.preventDefault(); // Prevent default form submission
+
+
+           // Get user input
+           var username = document.getElementById("username").value;
+           var email = document.getElementById("email").value;
+           var password = document.getElementById("password").value;
+
+
+           // Send user data backend server for storage
+           //  AJAX, Fetch API
+           fetch("register.html", {
+               method: "POST",
+               headers: {
+                   "Content-Type": "application/json"
+               },
+               body: JSON.stringify({
+                   username: username,
+                   email: email,
+                   password: password
+               })
+           })
+           .then(response => {
+               if (response.ok) {
+                   // Registration successful, handle response accordingly ( redirect to login page)
+                   goToLoginPage();
+               } else {
+                   // Registration failed, handle error response
+                   console.error("Registration failed:", response.statusText);
+                   alert("Registration failed. Please try again.");
+               }
+           })
+           .catch(error => {
+               // Handle network error
+               console.error("Network error:", error);
+               alert("Network error occurred. Please try again later.");
+           });
+       });
+   </script>
+</body>
+</html>
+
+
