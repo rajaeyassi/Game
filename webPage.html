@@ -12,7 +12,7 @@
 </head>
 <style>
  
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -33,13 +33,17 @@ body{
   background-attachment: fixed;
 }
 
+
+
+
 header{
   width: 100%;
-  height: 10vh;
+  height: 4vh;
   background:rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 0;
 }
 
 .main-content {
@@ -59,6 +63,11 @@ header{
   line-height: 1.3rem;
 }
 
+
+
+
+
+
 .video-section {
     display:flex;
     justify-content: center;
@@ -66,11 +75,18 @@ header{
     padding: 10px;
   }
 
+
+
+
   .video-section video {
     max-width: 100%;
     height: auto;
     margin-top: 0px;
   }
+
+
+
+
 
 #main {
  transition: margin-left .5s;
@@ -80,10 +96,10 @@ header{
 
  aside {
            width: 15%;
-           height: 85%;
+           height: 89%;
            border-radius: 10px 0px 0px 10px;
            background:#663da6;
-           margin-top: 16px;
+           margin-top: 25px;
        }
       
         aside h1 {
@@ -126,13 +142,13 @@ header{
         aside ul li a {
            text-decoration: none;
            color: rgb(255, 255, 255, .7);
-           font-size: 12px;
+           font-size: 15px;
            font-weight: 400;
            transition: .3s linear;
        }
 
         aside ul li a:hover{
-           color: #fff;
+           color: rgb(147, 168, 72);
        }
         aside ul li i{
            margin-right: 15px;
@@ -144,7 +160,7 @@ header{
        }
         aside ul .active_li a{
            color: #fff;
-           font-size: 13px;
+           font-size: 14px;
        }
 
 
@@ -209,10 +225,34 @@ ul.navbar li a:hover:not(.active){
   font-weight: bold;
   text-align: right;
   padding-right: 40px;
+  align-items: center;
+  padding: 7px;
 }
 #btn .fas{
   margin-right: 10px;
 }
+
+aside h1 {
+            width: 100%;
+            height: 10%;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 800;
+        }
+        header aside h1 i {
+             margin-left: 5px;
+        }
+
+
+
+
+
+
+
 
 
  </style>
@@ -238,6 +278,8 @@ ul.navbar li a:hover:not(.active){
 
          <aside>
             <div>
+               <h1>Game <i class="bi bi-joystick"></i></h1>
+
                <ul>
                 <li class="active_li"> <a href="#"><i class="bi bi-archive"></i>Browse</a></li>
                 <li> <a href="#"><i class="bi bi-clipboard-check-fill"></i>Channel</a></li>
@@ -251,7 +293,7 @@ ul.navbar li a:hover:not(.active){
          </aside>
         
          <div class="video-section">
-            <iframe width="800" height="450" src="https://www.youtube.com/watch?v=Gvb2JOrBq9Q&t=16s" frameborder="0" allowfullscreen></iframe>
+            <iframe width="800" height="450" src="https://www.youtube.com/watch?v=riivFV3txsY" frameborder="0" allowfullscreen></iframe>
         </div>  
       </side>
           
