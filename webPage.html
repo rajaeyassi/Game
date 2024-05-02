@@ -7,213 +7,79 @@
    <title>Elemental Fighter</title>
    <link rel="stylesheet" href="css/all.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">"
-
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <style>
  
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap');
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- }
-body{
-  background: #1a0327;
+}
+body {
   font-family: 'Poppins', sans-serif;
-  height: 350vh;
-
-}
-.container{
-  width: 100%;
-  height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(picBack.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  height: 100%;
+  margin: 0;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
-
-
-header{
-  width: 100%;
-  height: 4vh;
-  background:rgba(0,0,0,0.5);
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0;
+  background: rgba(0,0,0,0.5);
+  height: 10vh;
 }
 
-.main-content {
- margin-left: 250px;  
- padding: 20px;
-}
-.logo{
-  width: 400px;
-  height: 10vh;
-  background: #550381;
+
+.logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
-  padding: 10px;
-  line-height: 1.3rem;
-}
-
-
-
-
-
-
-.video-section {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-
-
-
-
-  .video-section video {
-    max-width: 100%;
-    height: auto;
-    margin-top: 0px;
-  }
-
-
-
-
-
-#main {
- transition: margin-left .5s;
- padding: 16px;
-}
-
-
- aside {
-           width: 15%;
-           height: 89%;
-           border-radius: 10px 0px 0px 10px;
-           background:#663da6;
-           margin-top: 25px;
-       }
-      
-        aside h1 {
-           width: 100%;
-           height: 10%;
-           border: 1px solid #fff;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           color: #fff;
-           font-size: 22px;
-           font-weight: 800;
-       }
-        aside h1 i {
-            margin-left: 5px;
-       }
-
-
-        aside ul {
-           position: relative;
-           margin-top: 10px;
-           list-style-type: none;
-           margin-left: 12px;
-           padding-bottom: 20px;
-           justify-content: space-between;
-
-
-       }
-        aside ul::before{
-          content: '';
-          position: absolute;
-          width: 88%;
-          height: 2px;
-          background: rgb(184, 184, 184, .1);
-          bottom: 0;
-       }
-        aside ul li {
-           padding: 10px 0px;
-       }
-        aside ul li a {
-           text-decoration: none;
-           color: rgb(255, 255, 255, .7);
-           font-size: 15px;
-           font-weight: 400;
-           transition: .3s linear;
-       }
-
-        aside ul li a:hover{
-           color: rgb(147, 168, 72);
-       }
-        aside ul li i{
-           margin-right: 15px;
-       }
-
-
-      side aside ul .active_li{
-           border-right: 3px solid #fff;
-       }
-        aside ul .active_li a{
-           color: #fff;
-           font-size: 14px;
-       }
-
-
-       side {
-           width: 100%;
-           height: 100%;
-           box-shadow: 0px 0px 30px rgba(20, 19, 19, 0.5);
-           border-radius: 10px;
-           background-color: var(--color-1);
-           display: flex;
-       }
-
-       .logo{
-  width: 400px;
-  height: 10vh;
   background: #550381;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #fff;
-  clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
   padding: 10px;
-  line-height: 1.3rem;
+  clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+  width: 300px;
 }
-.logo p{
-  width: 130px;
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo p {
   margin-left: 10px;
-  font-size: 30px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.logo .fas{
-  font-size: 50px;
-}
-ul.navbar{
+
+.navbar {
   display: flex;
   list-style: none;
 }
-ul.navbar li{
-  width: 120px;
+
+.navbar li {
+  margin-right: 20px;
 }
-ul.navbar li a{
+
+.navbar li a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
 }
-ul.navbar li a.active{
-  color: #FEC53A;
-}
 ul.navbar li a:hover:not(.active){
-  color: #683afe;
+ color: #683afe;
 }
-       
-#btn{
+
+
+#btn {
   width: 250px;
   height: 10vh;
   background: #FEC53A;
@@ -224,88 +90,191 @@ ul.navbar li a:hover:not(.active){
   font-size: 1.2rem;
   font-weight: bold;
   text-align: right;
-  padding-right: 40px;
+  display: flex;
   align-items: center;
-  padding: 7px;
+  
+
 }
-#btn .fas{
-  margin-right: 10px;
+
+
+#btn .fas {
+  margin-right: 90px;
+}
+
+.side {
+  display: flex;
+  height: 90vh;
+}
+
+aside {
+  width: 15%;
+  background: #663da6;
+  border-radius: 10px 0 0 10px;
+  margin-top: 3px;
+  color: #fff;
 }
 
 aside h1 {
-            width: 100%;
-            height: 10%;
-            border: 1px solid #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 22px;
-            font-weight: 800;
-        }
-        header aside h1 i {
-             margin-left: 5px;
-        }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+aside ul {
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+aside ul li {
+  padding: 10px 0;
+}
+aside ul  img{
+  width: 180px; /* Adjust the width as needed */
+   height: 300px; /* Maintain aspect ratio */
+   margin-right: 10px; /* Add spacing between the image and text */
+
+}
+aside ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, .7);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+aside ul li a:hover {
+  color: rgb(147, 168, 72);
+}
+
+aside ul li i {
+  margin-right: 15px;
+}
+
+.active_li {
+  border-right: 3px solid #fff;
+}
+
+.active_li a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-section video {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+
+}
+
+.right-bx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-bx i {
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(205, 215, 22);
+  padding: 5px;
+}
 
 
 
+.right-bx i:hover {
+  color: rgb(255, 255, 255);
+}
 
+.right-bx button {
+  background: rgba(184, 184, 184, .2);
+  border: 1px solid rgba(255, 255, 255, .2);
+  font-size: 12px;
+  color: #fff;
+  transition: .5s linear;
+  margin-left: 20px;
+}
 
+.right-bx button span {
+  margin-left: 5px;
+}
 
+.active_battery {
+  background: #663da6;
+  box-shadow: 0px 0px 20px #663da6;
+}
 
-
-
- </style>
-
-
-
+:root {
+  --color-1: #262b3f;
+  --color-2: #ffff;
+  --color-3: #1e2337;
+  --color-4: rgba(255, 255, 255, .5);
+  --color-5: greenyellow;
+}
+header a {
+  align-items: right;
+}
+</style>
 <body>
-      <div class="container">
-         <header>
-
-        <div class="logo">
-           <img src="logo (1).png">
-           <p>Let's Fight</p>
-       </div>
-      <ul class="navbar">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="Champions.html"> Champions</a> </li>
-          <li><a href="#">History MATCH</a></li>
-      </ul>
-      <a href="Login.html" id="btn"> <i class="fas fa-play"></i>PLAY NOW</a>
-      </header>
-      <side>
-
-         <aside>
-            <div>
-               <h1>Game <i class="bi bi-joystick"></i></h1>
-
-               <ul>
-                <li class="active_li"> <a href="#"><i class="bi bi-archive"></i>Browse</a></li>
-                <li> <a href="#"><i class="bi bi-clipboard-check-fill"></i>Channel</a></li>
-                <li> <a href="#"><i class="bi bi-calendar-event-fill"></i>Events</a></li>
-                <li> <a href="#"><i class="bi bi-controller"></i> Game</a></li>
-                <li> <a href="#"><i class="bi bi-people-fill"></i>People</a></li>
-      
-      
-            </ul>
-           </div>
-         </aside>
-        
-         <div class="video-section">
-            <iframe width="800" height="450" src="https://www.youtube.com/watch?v=riivFV3txsY" frameborder="0" allowfullscreen></iframe>
-        </div>  
-      </side>
-          
-            
-     
-    
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="logo (1).png" alt="Logo">
+        <p>Let's Fight</p>
       </div>
-   
-   
-   
-   <script>
-      
-   </script>
+      <ul class="navbar">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="Champions.html">Champions</a></li>
+        <li><a href="about.html">About Game</a></li>
+      </ul>
+      article>
+       <div class="right-bx">
+           <i class="bi bi-moon-fill" id="day_night"></i>
+           <i class="bi bi-brightness-high-fill" id="day_night2"></i>
+           <i class="bi bi-wifi"></i>
+           <button class="active_battery"><i class="bi bi-battery-half"></i><span>82%</span> </button>
+       </div>
+   </article>
+
+      <a  href="Login.html" id="btn">  <i class="fas fa-play"></i> PLAY NOW</a>
+    </header>
+    <div class="side">
+      <aside>
+        <h1>Game <i class="bi bi-joystick"></i></h1>
+        <ul>
+          <li class="active_li"><a href="#"><i class="bi bi-archive"></i>Browse</a></li>
+          <li><a href="#"><i class="bi bi-clipboard-check-fill"></i>Channel</a></li>
+          <li><a href="#"><i class="bi bi-calendar-event-fill"></i>Events</a></li>
+          <li><a href="#"><i class="bi bi-controller"></i>Game</a></li>
+          <li><a href="#"><i class="bi bi-people-fill"></i>People</a></li>
+        </ul>
+       <ul><img src="fightt.gif"></ul> 
+      </aside>
+      <div class="video-section">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/riivFV3txsY" frameborder="0" allowfullscreen autoplay muted></iframe>
+      </div>  
+    </div>
+  </div>
+  <script>
+    window.onload = function() {
+        let day_night = document.getElementById('day_night');
+        let day_night2 = document.getElementById('day_night2');
+        day_night2.style.display = "none";
+        day_night.addEventListener('click', () => {
+            document.documentElement.style.setProperty('--color-1', 'rgba(184, 184, 184, .5)');
+            document.documentElement.style.setProperty('--color-2', '#000');
+            document.documentElement.style.setProperty('--color-3', '#fff');
+            document.documentElement.style.setProperty('--color-4', 'rgba(0, 0, 0, .5)');
+            document.documentElement.style.setProperty('--color-5', '#663da6');
+        });
+    };
+</script>
+
 </body>
 </html>
