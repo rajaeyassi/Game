@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url('');
+			background-size: cover;
+			font-family: Arial, sans-serif;
+		}
+
+		 .container {
+			width: 400px;
+			padding: 0px;
+			background-color: rgba(255, 255, 255, 0.8); 
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			text-align: center; 
+			margin-right: 5px;
+			
+		}
+
+		h1 {
+			font-size: 48px;
+			font-weight: bold;
+			color: #333;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			animation: moveText 3s infinite alternate;
+		} 
+
+		@keyframes moveText {
+			0% {
+				transform: translateX(-20px);
+			}
+			100% {
+				transform: translateX(20px);
+			}
+		}
+
+
+		 h2 {
+			 color: #333; 
+			text-align: center;
+      margin-bottom: 20px;
+		} 
+
+		.form-group {
+			margin-bottom: 20px;
+			text-align: left;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			color: #333;
+		}
+
+		input[type="text"],
+		input[type="password"] {
+			width: 380px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+		}
+
+		button[type="submit"],
+		button[type="button"] {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: #fff;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+
+		button[type="submit"]:hover,
+		button[type="button"]:hover {
+			background-color: #45a049;
+		}
+
+		.register-link {
+			display: inline-block;
+			margin-top: 10px;
+			color: #333;
+			text-decoration: none;
+		}
+
+
+		.header {
+			text-align: center;
+
+			margin-bottom: 20px;
+          background-image: url('https://www.shutterstock.com/image-photo/soccer-green-grass-panoramic-banner-600w-1663645822.jpg');		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+	</header>
+	<div class="container">
+		<h2>Login</h2>
+		<form id="login-form" method="POST" action="login.php">
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" id="username" name="username" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" required>
+			</div>
+			
+			<button type="submit">Login</button>
+			<button type="button" onclick="location.href='register.php'">Create new account</button>
+		</form>
+	</div>

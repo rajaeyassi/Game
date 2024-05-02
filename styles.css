@@ -1,0 +1,72 @@
+/* CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c45bd9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.character-container {
+    position: relative;
+    width: 500px; /* Adjust this value to change the size of the triangle */
+    height: 500px; /* Adjust this value to change the size of the triangle */
+}
+
+.character {
+    position: absolute;
+    width: 200px; /* Adjust this value to change the size of the character */
+    height: 200px; /* Adjust this value to change the size of the character */
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.character img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character-info {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.character:hover {
+    transform: scale(1.1);
+}
+
+.character:hover .character-info {
+    opacity: 1;
+}
+
+.character-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.character-2 {
+    top: 80%;
+    left: 20%;
+}
+
+.character-3 {
+    top: 80%;
+    left: 80%;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">"
+    <title>Game Website</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        :root {
+            --color-1: #262b3f;
+            --color-2: #fff;
+            --color-3: #1e2337;
+            --color-4: rgba(255, 255, 255, 0.5);
+            --color-5: greenyellow;
+        }
+
+        header {
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 0px 30px rgba(20, 19, 19, 0.5);
+            border-radius: 10px;
+            background-color: var(--color-1);
+            display: flex;
+        }
+        header aside, 
+        article {
+            width: 80%;
+            height: 100%;
+            border: 1px solid #fff;
+            border-radius: 0px 10px 10px 0px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0)), url('webBack.jpeg');
+
+        }
+
+        header aside {
+            width: 15%;
+            border-radius: 10px 0px 0px 10px;
+            background:#663da6;
+        }
+        
+        header aside h1 {
+            width: 100%;
+            height: 10%;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 800;
+        }
+        header aside h1 i {
+             margin-left: 5px;
+        }
+
+        header aside ul {
+            position: relative;
+            margin-top: 10px;
+            list-style-type: none;
+            margin-left: 12px;
+            padding-bottom: 20px;
+            justify-content: space-between;
+
+        }
+        header aside ul::before{
+           content: '';
+           position: absolute;
+           width: 88%;
+           height: 2px;
+           background: rgb(184, 184, 184, .1);
+           bottom: 0;
+        }
+        header aside ul li {
+            padding: 10px 0px;
+        }
+        header aside ul li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255, .7);
+            font-size: 12px;
+            font-weight: 400;
+            transition: .3s linear;
+
+        }
+        header aside ul li a:hover{
+            color: #fff;
+        }
+        header aside ul li i{
+            margin-right: 15px;
+        }
+
+        header aside ul .active_li{
+            border-right: 3px solid #fff;
+        }
+        header aside ul .active_li a{
+            color: #fff;
+            font-size: 13px;
+        }
+        header article nav {
+            width:100%;
+            height: 10%;
+            border:1px solid #fff;
+            border-radius: 0px 10px  0px 0px ;
+            padding: 0px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header article nav button {
+            padding: 7px 20px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background: #663da6;
+            color:#fff;
+            font-family: sans-serif;
+            font-weight: 400;
+        }
+
+        header article nav .search {
+            width: 40%;
+            background: var(--color-3);
+            padding: 4px 10px;
+            transition: .5s linear;
+            margin-right: 400px;
+        }
+        header article nav .search input {
+            width: 50%;
+            background: none;
+            border: none;
+            outline: none;
+            padding: 0px 10px;
+            color:var(--color-2);
+            transition: .5s linear;
+
+        }
+        header article nav .right-bx {
+            width: 38%;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        header article nav .right-bx  i {
+            color: var(--color-4);
+            font-size: 20px;
+            cursor: pointer;
+            transition: .5e linear;
+        }
+        header article nav .right-bx  i:hover {
+            color: rgb(255, 255, 255);
+        }
+        header article nav .right-bx  button {
+             padding: 0px 20px;
+             background: rgb(184, 184, 184, .2);
+             border: 1px solid rgba(255, 255, 255, .2);
+             display: flex;
+             align-items: center;
+             font-size: 12px;
+             color: #fff;
+             transition: .5s linear;
+        }
+        header article nav .right-bx  button span {
+            margin: -2px 0px 0px 10px;
+        }
+        header article nav .right-bx .active_battery {
+            background:#663da6;
+            box-shadow: 0px 0px 20px #663da6;
+        }
+
+        header article .game1 {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            border: 1px solid #fff;
+            padding: 0px 30px;
+            margin-top: 20px;
+        }
+        header article .game1 h3 {
+            color: var(--color-2);
+            font-size: 14px;
+            font-weight: 600;
+            transition: .5s linear;
+        }
+
+        id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#"><i class="fas fa-cogs"></i> Services</a>
+        <a href="#"><i class="fas fa-users"></i> Clients</a>
+        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+
+
+
+        <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ </button> 
+     </div>
+    </style>
+</head>
+<body>
+    <header>
+    <aside>
+        <h1>Game <i class="bi bi-joystick"></i></h1>
+        <ul >
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="Champions.html"> Champions</a> </li>
+            <li><a href="#">History MATCH</a></li>
+        </ul>
+        <ul>
+            <li class="active_li"> <a href="#"><i class="bi bi-archive"></i>Browse</a></li> 
+            <li> <a href="#"><i class="bi bi-clipboard-check-fill"></i>Channel</a></li> 
+            <li> <a href="#"><i class="bi bi-calendar-event-fill"></i>Events</a></li> 
+            <li> <a href="#"><i class="bi bi-controller"></i> Game</a></li> 
+            <li> <a href="#"><i class="bi bi-people-fill"></i>People</a></li> 
+
+
+        </ul>
+       
+    </aside>
+    <article>
+        <nav>
+              <button>Strem</button>
+              <div class="search">
+                  <input type="text" placeholder="...search">
+                  <i class="bi bi-search"></i>
+              </div>
+              <div class="right-bx">
+                <i class="bi bi-moon-fill"></i>
+                <i class="bi bi-brightness-high-fill"></i>
+                <i class="bi bi-wifi"></i>
+               <button class="active_battery"><i class="bi bi-battery-half"></i><span>82%</span></button> 
+              </div>
+        </nav>
+        <div class="game1">
+            <h3>Recommend For You</h3>
+        </div>
+    </article>
+
+</header>
+</body>
+</html>
+
