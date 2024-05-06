@@ -1,280 +1,697 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Elemental Fighter</title>
-   <link rel="stylesheet" href="css/all.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elemental Fighter</title>
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <style>
- 
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap');
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
+
+
+
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(picBack.jpeg);
-  height: 100%;
-  margin: 0;
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(picBack.jpeg);
+margin: 0;
+overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+max-width: 100%; /* Ensure content does not exceed viewport width */
+}
+
+
+.container {
+display: flex;
+flex-direction: column;
+height: 100vh;
 }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(0,0,0,0.5);
-  height: 10vh;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: rgba(0,0,0,0.5);
+height: 10vh;
 }
 
 
 .logo {
-  display: flex;
-  align-items: center;
-  background: #550381;
-  color: #fff;
-  padding: 10px;
-  clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
-  width: 300px;
+display: flex;
+align-items: center;
+background: #550381;
+color: #fff;
+padding: 10px;
+clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+width: 300px;
 }
 
+
 .logo img {
-  width: 50px;
-  height: 50px;
+width: 50px;
+height: 50px;
 }
 
 .logo p {
-  margin-left: 10px;
-  font-size: 20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+margin-left: 10px;
+font-size: 20px;
+font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .navbar {
-  display: flex;
-  list-style: none;
+display: flex;
+list-style: none;
 }
 
 .navbar li {
-  margin-right: 20px;
+margin-right: 20px;
 }
+
 
 .navbar li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
+text-decoration: none;
+color: #fff;
+font-weight: bold;
 }
 ul.navbar li a:hover:not(.active){
- color: #683afe;
+color: #683afe;
 }
-
 
 #btn {
-  width: 250px;
-  height: 10vh;
-  background: #FEC53A;
-  color: #000;
-  outline: none;
-  border: none;
-  clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: right;
-  display: flex;
-  align-items: center;
-  
+width: 250px;
+height: 10vh;
+background: #FEC53A;
+color: #000;
+outline: none;
+border: none;
+clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+font-size: 1.2rem;
+font-weight: bold;
+text-align: right;
+display: flex;
+align-items: center;
 
 }
-
 
 #btn .fas {
-  margin-right: 90px;
+margin-right: 90px;
 }
+
 
 .side {
-  display: flex;
-  height: 90vh;
+display: flex;
+height: 90vh;
 }
+
 
 aside {
-  width: 15%;
-  background: #663da6;
-  border-radius: 10px 0 0 10px;
-  margin-top: 3px;
-  color: #fff;
+width: 15%;
+height: 700px;
+background: #663da6;
+border-radius: 10px 0 0 10px;
+margin-top: 3px;
+color: #fff;
 }
+
 
 aside h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  font-weight: 800;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+font-weight: 800;
 }
+
 
 aside ul {
-  margin-top: 10px;
-  list-style-type: none;
+margin-top: 10px;
+list-style-type: none;
 }
 
+
 aside ul li {
-  padding: 10px 0;
+padding: 10px 0;
 }
 aside ul  img{
-  width: 180px; /* Adjust the width as needed */
-   height: 300px; /* Maintain aspect ratio */
-   margin-right: 10px; /* Add spacing between the image and text */
+width: 180px; /* Adjust the width as needed */
+height: 300px; /* Maintain aspect ratio */
+margin-right: 10px; /* Add spacing between the image and text */
 
 }
 aside ul li a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, .7);
-  font-size: 15px;
-  font-weight: 400;
+text-decoration: none;
+color: rgba(255, 255, 255, .7);
+font-size: 15px;
+font-weight: 400;
+}
+aside ul li a:hover {
+color: rgb(147, 168, 72);
 }
 
-aside ul li a:hover {
-  color: rgb(147, 168, 72);
-}
 
 aside ul li i {
-  margin-right: 15px;
+margin-right: 15px;
 }
+
 
 .active_li {
-  border-right: 3px solid #fff;
+border-right: 3px solid #fff;
 }
+
 
 .active_li a {
-  color: #fff;
-  font-size: 14px;
+color: #fff;
+font-size: 14px;
 }
+
 
 .video-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 }
+
 
 .video-section video {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
+max-width: 100%;
+height: auto;
+margin-top: 20px;
+
 
 }
+
 
 .right-bx {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
+
 
 .right-bx i {
-  font-size: 20px;
-  cursor: pointer;
-  color: rgb(205, 215, 22);
-  padding: 5px;
+font-size: 20px;
+cursor: pointer;
+color: rgb(205, 215, 22);
+padding: 5px;
 }
-
 
 
 .right-bx i:hover {
-  color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
 }
+
 
 .right-bx button {
-  background: rgba(184, 184, 184, .2);
-  border: 1px solid rgba(255, 255, 255, .2);
-  font-size: 12px;
-  color: #fff;
-  transition: .5s linear;
-  margin-left: 20px;
+background: rgba(184, 184, 184, .2);
+border: 1px solid rgba(255, 255, 255, .2);
+font-size: 12px;
+color: #fff;
+transition: .5s linear;
+margin-left: 20px;
 }
+
 
 .right-bx button span {
-  margin-left: 5px;
+margin-left: 5px;
 }
+
 
 .active_battery {
-  background: #663da6;
-  box-shadow: 0px 0px 20px #663da6;
+background: #663da6;
+box-shadow: 0px 0px 20px #663da6;
 }
+
 
 :root {
-  --color-1: #262b3f;
-  --color-2: #ffff;
-  --color-3: #1e2337;
-  --color-4: rgba(255, 255, 255, .5);
-  --color-5: greenyellow;
+--color-1: #262b3f;
+--color-2: #ffff;
+--color-3: #1e2337;
+--color-4: rgba(255, 255, 255, .5);
+--color-5: greenyellow;
 }
 header a {
-  align-items: right;
+align-items: right;
 }
+.banner {
+position: relative;
+width:1000px;
+min-height: 100vh;
+padding: 20px 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.banner .bg {
+position: relative;
+width:100%;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.banner .bg .content {
+width: 50%;
+height: 100%;
+
+}
+.banner .bg .content h2{
+font-size: 3em;
+color: #fff;
+letter-spacing: 1px;
+}
+.banner .bg .content p{
+font-size: 1em;
+color:#dbdd9d;
+letter-spacing: 1px;
+
+
+}
+.banner .bg .content a{
+ display: inline-block;
+ padding: 10px 20px;
+ margin: 0px 20px;
+ border: 1px solid #1aeeef;
+ text-decoration: none;
+ font-weight: 700;
+ color: #fff;
+ border-radius: 6px;
+ letter-spacing: 1px;
+ margin-top: 20px;
+ }
+ .banner .bg .content a:hover{
+   background: #1aeeef;
+   border: none;
+   box-shadow: 0 0 10px  #1aeeef;
+ }
+ .banner .bg  img{
+   width:500px;
+ }
+ .about {
+     position: relative;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 50px;
+     padding: 20px;
+   }
+
+
+   .about .contentbx {
+     width: 50%;
+     padding: 20px;
+   }
+
+
+   .about .contentbx h2 {
+     font-size: 3em;
+     font-weight: 700;
+     color: #fff;
+   }
+
+
+   .about .contentbx p {
+     max-width: 600px;
+     text-align: justify;
+     color: #dbdd9d;
+   }
+
+
+   .about img {
+     width: 50%;
+     height: auto;
+   }
+
+
+   .about .contentbx a {
+     display: inline-block;
+     padding: 10px 20px;
+     margin: 0px 20px;
+     border: 1px solid #1aeeef;
+     text-decoration: none;
+     font-weight: 700;
+     color: #fff;
+     border-radius: 6px;
+     letter-spacing: 1px;
+     margin-top: 20px;
+   }
+
+
+   .about .contentbx a:hover {
+     background: #1aeeef;
+     border: none;
+     box-shadow: 0 0 10px #1aeeef;
+   }
+
+
+   .games {
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin: 40px auto;
+   margin-bottom: 100px;
+
+
+ }
+
+
+ .games h2 {
+   color: #fff;
+   margin: 10px 0;
+ }
+
+
+ .games ul {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+ }
+
+
+ .games ul li {
+   list-style: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   margin: 5px;
+   letter-spacing: 1px;
+   cursor: pointer;
+   color: #fff;
+ 
+ }
+
+
+ .games ul li.active {
+   background: #1aeeef;
+   color: #050e2d;
+   box-shadow: 0 0 10px #1aeeef;
+ }
+ .games ul li:hover {
+   color: #1aeeef;
+   box-shadow: 0 0 10px #1aeeef;
+
+
+ }
+
+
+ .games .cardbx {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 20px;
+   margin-left: 20px;
+   padding-left: 0px;
+   padding-right: 0px;
+   flex-wrap: wrap;
+  
+ }
+
+
+ .games .cardbx .card {
+   width: 210px;
+   border-radius: 10px;
+   background: #1b2141;
+   overflow: hidden;
+   margin-bottom: 200px;
+   margin-left: 30px;
+ }
+
+
+ .games .cardbx .card img {
+   width: 100%;
+   height: 290px;
+   object-fit: cover;
+   padding: 10px;
+ }
+
+
+ .games .cardbx .card .content {
+   padding: 10px;
+ }
+
+
+ .games .cardbx .card .content h4 {
+   color: #fff;
+   margin: 15px 0;
+ }
+
+
+ .games .cardbx .card .progress-line {
+   position: relative;
+   height: 10px;
+   width: 100%;
+   background: #35407e;
+   margin-bottom: 15px;
+   border-radius: 10px;
+   transform: scaleX(0);
+   transform-origin: left;
+   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+ }
+
+
+ .games .cardbx .card .progress-line span {
+   position: absolute;
+   height: 100%;
+   width: 80%;
+   background: #1aeeef;
+   border-radius: 10px;
+   box-shadow: 0 0 10px #1aeeef;
+   transform: scaleX(1);
+   transform-origin: left;
+   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+ }
+ @keyframes animate{
+   100%{
+     transform: scaleX(1);
+
+
+   }
+ }
+ .games .cardbx .card .info {
+   border-top: 2px solid #35407e;
+   padding: 5px;
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .games .cardbx .card .info p {
+   font-size: 1em;
+   color:#fff;
+ }
+ .games .cardbx .card .info p span {
+   color: #1aeeef
+ }
+ .games .cardbx .card .info a{
+     display: inline-block;
+     padding: 10px 20px;
+     margin: 0px 20px;
+     border: 1px solid #1aeeef;
+     text-decoration: none;
+     font-weight: 300;
+     color: #fff;
+     border-radius: 8px;
+     margin-top: 20px;
+     width: 80px;
+     height: 80px;
+   }
+
+
+   .games .cardbx .card .info a:hover {
+     background: #1aeeef;
+     border: none;
+     box-shadow: 0 0 10px #1aeeef;
+   }
+   .games .cardbx .card.hide{
+     display: none;
+
+   }
+
 </style>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <img src="logo (1).png" alt="Logo">
-        <p>Let's Fight</p>
-      </div>
-      <ul class="navbar">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="Champions.html">Champions</a></li>
-        <li><a href="about.html">About Game</a></li>
-      </ul>
-      article>
-       <div class="right-bx">
-           <i class="bi bi-moon-fill" id="day_night"></i>
-           <i class="bi bi-brightness-high-fill" id="day_night2"></i>
-           <i class="bi bi-wifi"></i>
-           <button class="active_battery"><i class="bi bi-battery-half"></i><span>82%</span> </button>
-       </div>
-   </article>
-
-      <a  href="Login.html" id="btn">  <i class="fas fa-play"></i> PLAY NOW</a>
-    </header>
-    <div class="side">
-      <aside>
-        <h1>Game <i class="bi bi-joystick"></i></h1>
-        <ul>
-          <li class="active_li"><a href="#"><i class="bi bi-archive"></i>Browse</a></li>
-          <li><a href="#"><i class="bi bi-clipboard-check-fill"></i>Channel</a></li>
-          <li><a href="#"><i class="bi bi-calendar-event-fill"></i>Events</a></li>
-          <li><a href="#"><i class="bi bi-controller"></i>Game</a></li>
-          <li><a href="#"><i class="bi bi-people-fill"></i>People</a></li>
-        </ul>
-       <ul><img src="fightt.gif"></ul> 
-      </aside>
-      <div class="video-section">
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/riivFV3txsY" frameborder="0" allowfullscreen autoplay muted></iframe>
-      </div>  
+<div class="container">
+ <header>
+   <div class="logo">
+     <img src="logo (1).png" alt="Logo">
+     <p>Let's Fight</p>
+   </div>
+   <ul class="navbar">
+     <li><a href="index.html" class="active">Home</a></li>
+     <li><a href="Champions.html">Champions</a></li>
+     <li><a href="about.html">About Game</a></li>
+   </ul>
+  <article>
+    <div class="right-bx">
+        <i class="bi bi-moon-fill" id="day_night"></i>
+        <i class="bi bi-brightness-high-fill" id="day_night2"></i>
+        <i class="bi bi-wifi"></i>
+        <button class="active_battery"><i class="bi bi-battery-half" id="battery_icon"></i><span id ="battery_level">82%</span> </button>
     </div>
-  </div>
-  <script>
-    window.onload = function() {
-        let day_night = document.getElementById('day_night');
-        let day_night2 = document.getElementById('day_night2');
-        day_night2.style.display = "none";
-        day_night.addEventListener('click', () => {
-            document.documentElement.style.setProperty('--color-1', 'rgba(184, 184, 184, .5)');
-            document.documentElement.style.setProperty('--color-2', '#000');
-            document.documentElement.style.setProperty('--color-3', '#fff');
-            document.documentElement.style.setProperty('--color-4', 'rgba(0, 0, 0, .5)');
-            document.documentElement.style.setProperty('--color-5', '#663da6');
-        });
-    };
+</article>
+
+
+   <a  href="Login.html" id="btn">  <i class="fas fa-play"></i> PLAY NOW</a>
+ </header>
+ <div class="side">
+   <aside>
+     <h1>Game <i class="bi bi-joystick"></i></h1>
+     <ul>
+       <li class="active_li"><a href="#"><i class="bi bi-archive"></i>Browse</a></li>
+       <li><a href="#"><i class="bi bi-clipboard-check-fill"></i>Channel</a></li>
+       <li><a href="game@.html"><i class="bi bi-controller"></i>Game</a></li>
+       <li><a href="#"><i class="bi bi-people-fill"></i>People</a></li>
+     </ul>
+    <ul><img src="fightt.gif"></ul>
+   </aside>
+   <div class="banner">
+     <div class="bg">
+       <div class="content">
+         <h2>A new home for<br>
+         Game Lovers</h2>
+         <p>A fast-paced 2D MOBA fighter  game that supports up to eight players.
+         </p>
+         <a href="#" class="btn">Download</a>
+       </div>
+       <img src="monkweb.png">
+     </div>
+   </div>
+ 
+</div>
+<!--About-->
+<div class="about">
+<div class="contentbx">
+  <h2>About us</h2>
+  <p>Welcome to Elemental Fighter, an immersive adventure game that will take you on a journey through the mystical realms of elemental magic. As a player, you'll embark on an elemental fighter game to master the four elemental forces—earth, fire, water, and air—and restore balance to the world.</p>
+  <a href="#">Read more</a>
+</div>
+<img src="hold.jpeg">
+</div>
+<div class="games">
+ 
+ <ul>
+   
+ </ul>
+ <div class="cardbx">
+   <div class="card" data-item="pc">
+     <img src="water.gif">
+     <div class="content">
+       <h4>Elementals: Water Priestess</h4>
+       <div class="progress-line"><span></span></div>
+       <div class="info">
+       </div>
+     </div>
+   </div>
+   <div class="card" data-item="pc">
+     <img src="Leaf.gif">
+     <div class="content">
+       <h4>Elementals: Leaf Ranger</h4>
+       <div class="progress-line"><span></span></div>
+       <div class="info">
+       </div>
+     </div>
+   </div>
+   <div class="card" data-item="pc">
+     <img src="firefire.gif">
+     <div class="content">
+       <h4>Elementals: Fire Knight
+      </h4>
+       <div class="progress-line"><span></span></div>
+       <div class="info">
+
+       </div>
+     </div>
+   </div>
+   <div class="card" data-item="mobile">
+     <img src="windd.gif">
+     <div class="content">
+       <h4>Elementals: Wind Hashashin</h4>
+       <div class="progress-line"><span></span></div>
+       <div class="info">
+       </div>
+     </div>
+   </div>
+   <div class="card" data-item="mobile">
+     <img src="j9fAnA.gif">
+     <div class="content">
+       <h4> Werewolf</h4>
+       <div class="progress-line"><span></span></div>
+       <div class="info">
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+
+<script>
+window.onload = function() {
+     let day_night = document.getElementById('day_night');
+     let day_night2 = document.getElementById('day_night2');
+     let root = document.documentElement;
+     day_night2.style.display = "none";
+     day_night.addEventListener('click', () => {
+         root.style.setProperty('--color-1', '#262b3f'); // Dark mode colors
+         root.style.setProperty('--color-2', '#ffff');
+         root.style.setProperty('--color-3', '#1e2337');
+         root.style.setProperty('--color-4', 'rgba(255, 255, 255, .5)');
+         root.style.setProperty('--color-5', 'greenyellow');
+     });
+     day_night2.addEventListener('click', () => {
+         root.style.setProperty('--color-1', '#ffff'); // Light mode colors
+         root.style.setProperty('--color-2', '#000');
+         root.style.setProperty('--color-3', '#fff');
+         root.style.setProperty('--color-4', 'rgba(0, 0, 0, .5)');
+         root.style.setProperty('--color-5', 'greenyellow');
+     });
+ };
+
+
+ let active_battery = document.getElementById('active_battery');
+  let battery_icon = document.getElementById('battery_icon');
+  let battery_level = document.getElementById('battery_level');
+
+
+ let list = document.querySelectorAll('.list');
+   let card = document.querySelectorAll('.card');
+
+
+   for (let i = 0; i < list.length; i++) {
+     list[i].addEventListener('click', function() {
+       for (let j = 0; j < list.length; j++) {
+         list[j].classList.remove('active');
+       }
+       this.classList.add('active');
+       let dataFilter = this.getAttribute('data-filter');
+
+
+       for (let k = 0; k < card.length; k++) {
+         card[k].classList.remove('active');
+         card[k].classList.add('hide');
+
+
+         if (card[k].getAttribute('data-item') == dataFilter || dataFilter == 'all') {
+           card[k].classList.remove('hide');
+           card[k].classList.add('active');
+         }
+       }
+     })
+   }
 </script>
+
+
+
 
 </body>
 </html>
